@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Vault</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <div class="brand-mark" aria-label="Image Vault brand mark">
+                <span>IV</span>
+                <small>IMAGE VAULT</small>
+            </div>
+            <p class="eyebrow">A COLLECTION OF MOMENTS</p>
+            <h1>Image Vault</h1>
+            <p class="intro">A responsive gallery for the images worth remembering.</p>
+        </div>
+    </header>
+
+    <main class="gallery-section">
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">THE ARCHIVE</p>
+                <h2>Featured images</h2>
+            </div>
+            <div class="gallery-actions">
+                <p class="image-count">12 images</p>
+                <label class="upload-button" for="imageUpload">+ Add new images</label>
+                <input id="imageUpload" type="file" accept="image/*" multiple>
+            </div>
+        </div>
+
+        <div class="gallery-toolbar">
+            <label class="search-box">
+                <span class="sr-only">Search images</span>
+                <input id="searchInput" type="search" placeholder="Search images...">
+            </label>
+            <div class="view-actions" role="group" aria-label="Gallery filters and theme">
+                <button class="filter-button active" id="allFilter" type="button">All</button>
+                <button class="filter-button" id="favoriteFilter" type="button">Favourites</button>
+                <button class="theme-button" id="themeToggle" type="button" aria-label="Switch to dark mode">Dark mode</button>
+            </div>
+        </div>
+
+        <div class="drop-zone" id="dropZone" tabindex="0">
+            <strong>Drop images here</strong>
+            <span>or use the Add new images button</span>
+        </div>
+
+        <div class="img-gallery">
+            <figure class="gallery-item" data-title="Image One" data-description="A selected moment from the archive."><img src="Images/img1.jpg" alt="Image One" loading="lazy"></figure>
+            <figure class="gallery-item" data-title="Image Two" data-description="A selected moment from the archive."><img src="Images/img2.jpg" alt="Image Two" loading="lazy"></figure>
+            <figure class="gallery-item" data-title="Image Three" data-description="A selected moment from the archive."><img src="Images/img3.jpg" alt="Image Three" loading="lazy"></figure>
+            <figure class="gallery-item" data-title="Image Four" data-description="A selected moment from the archive."><img src="Images/img4.jpg" alt="Image Four" loading="lazy"></figure>
+            <figure class="gallery-item" data-title="Image Five" data-description="A selected moment from the archive."><img src="Images/img5.jpg" alt="Image Five" loading="lazy"></figure>
+            <figure class="gallery-item" data-title="Image Six" data-description="A selected moment from the archive."><img src="Images/img6.jpg" alt="Image Six" loading="lazy"></figure>
+            <figure class="gallery-item" data-title="Image Seven" data-description="A selected moment from the archive."><img src="Images/img7.jpg" alt="Image Seven" loading="lazy"></figure>
+            <figure class="gallery-item" data-title="Image Eight" data-description="A selected moment from the archive."><img src="Images/img8.jpg" alt="Image Eight" loading="lazy"></figure>
+            <figure class="gallery-item" data-title="Image Nine" data-description="A selected moment from the archive."><img src="Images/img9.jpg" alt="Image Nine" loading="lazy"></figure>
+            <figure class="gallery-item" data-title="Image Ten" data-description="A selected moment from the archive."><img src="Images/img10.jpg" alt="Image Ten" loading="lazy"></figure>
+            <figure class="gallery-item" data-title="Image Eleven" data-description="A selected moment from the archive."><img src="Images/img11.jpg" alt="Image Eleven" loading="lazy"></figure>
+            <figure class="gallery-item" data-title="Image Twelve" data-description="A selected moment from the archive."><img src="Images/img12.jpg" alt="Image Twelve" loading="lazy"></figure>
+        </div>
+    </main>
+
+    <div class="full-img" id="fullImgBox" role="dialog" aria-modal="true" aria-label="Image preview" aria-hidden="true">
+        <button class="close-button" id="closeButton" type="button" aria-label="Close image preview">&times;</button>
+        <button class="gallery-control previous-button" id="previousButton" type="button" aria-label="Previous image">&#8249;</button>
+        <div class="preview-content">
+            <img src="Images/img1.jpg" id="fullImg" alt="Selected gallery image">
+            <h3 class="preview-title" id="previewTitle">Image One</h3>
+            <p class="preview-description" id="previewDescription">A selected moment from the archive.</p>
+            <div class="preview-actions">
+                <button id="downloadButton" type="button">Download</button>
+                <button id="editButton" type="button">Edit details</button>
+                <button id="deleteButton" type="button">Delete image</button>
+            </div>
+            <p class="preview-counter" id="previewCounter">1 / 12</p>
+        </div>
+        <button class="gallery-control next-button" id="nextButton" type="button" aria-label="Next image">&#8250;</button>
+    </div>
+</body>
+</html>
